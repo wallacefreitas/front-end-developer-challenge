@@ -7,7 +7,9 @@ interface LabelProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const LabelWrapper = styled.h1<{ responsive?: boolean }>`
-  display: inline-block;
+  display: flex;
+  flex: 1;
+  text-transform: uppercase;
 
   ${(props) =>
     props.responsive &&
