@@ -12,6 +12,7 @@ export enum Colors {
   DEFAULT = "#e0e0e0",
   GRAY = "gray",
   GREEN = "green",
+  BLUE = "blue",
 }
 
 export enum Progress {

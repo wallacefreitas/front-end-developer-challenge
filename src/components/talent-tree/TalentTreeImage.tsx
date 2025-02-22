@@ -3,15 +3,18 @@ import styled from "styled-components";
 interface TalentTreeImageProps {
   src: string;
   alt: string;
+  borderColor: string;
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const TalentImageWrapper = styled.img`
+const TalentImageWrapper = styled.img<{
+  borderColor: string;
+}>`
   width: 64px;
   height: 64px;
   padding: 4px;
   background-color: #313031;
-  border: 2px solid #ccc;
+  border: 2px solid ${(props) => props.borderColor};
   position: relative;
   filter: brightness(100%);
   transition: filter 0.3s;
@@ -36,11 +39,12 @@ const TalentTreeImageButton = styled.button`
 export const TalentTreeImage = ({
   src,
   alt,
+  borderColor,
   handleClick,
 }: TalentTreeImageProps) => {
   return (
     <TalentTreeImageButton onMouseDown={handleClick}>
-      <TalentImageWrapper src={src} alt={alt} />
+      <TalentImageWrapper src={src} alt={alt} borderColor={borderColor} />
     </TalentTreeImageButton>
   );
 };
