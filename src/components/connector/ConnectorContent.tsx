@@ -13,7 +13,7 @@ const ConectorContentWrapper = styled.div<{
   display: flex;
   height: 15px;
   background-color: ${(props) => props.backgroundColor};
-  width: ${(props) => props.width}%;
+  width: ${(props) => props.width};
   transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
   background-image: linear-gradient(
