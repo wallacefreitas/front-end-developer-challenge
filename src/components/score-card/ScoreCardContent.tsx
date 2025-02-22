@@ -4,7 +4,7 @@ interface ScoreCardContentProps {
   children: React.ReactNode;
 }
 
-const ScoreCardContentWrapper = styled.div<{ active: boolean }>`
+const ScoreCardContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,5 @@ const ScoreCardContentWrapper = styled.div<{ active: boolean }>`
 `;
 
 export const ScoreCardContent = ({ children }: ScoreCardContentProps) => {
-  return (
-    <ScoreCardContentWrapper active={true}>{children}</ScoreCardContentWrapper>
-  );
+  return <ScoreCardContentWrapper>{children}</ScoreCardContentWrapper>;
 };
