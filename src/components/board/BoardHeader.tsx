@@ -6,13 +6,15 @@ const BoardHeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: #0f172a;
   width: 100%;
-  font-size: 32px;
 `;
 
 export const BoardHeader = () => {
   return (
-    <BoardHeaderWrapper>TITANSTAR LEGENDS RUNE MASTERY</BoardHeaderWrapper>
+    <BoardHeaderWrapper>
+      <h1>TITANSTAR LEGENDS RUNE MASTERY</h1>
+    </BoardHeaderWrapper>
   );
 };
