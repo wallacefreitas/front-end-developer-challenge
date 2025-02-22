@@ -1,7 +1,7 @@
 import { ConectorContent } from "./ConnectorContent";
-import { ConectorRoot } from "./ConnectorRoot";
+import { ConnectorRoot } from "./ConnectorRoot";
 
 export const Connector = {
-  Root: ConectorRoot,
+  Root: ConnectorRoot,
   Content: ConectorContent,
 };

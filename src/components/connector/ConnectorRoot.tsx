@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { stripeAnimation } from "../../shared/utils/styles";
 
-interface ConectorRootProps {
+interface ConnectorRootProps {
   children: React.ReactNode;
 }
 
-export const ConectorRootWrapper = styled.div`
+export const ConnectorRootWrapper = styled.div`
   display: flex;
   width: 100px;
   height: 15px;
@@ -30,6 +30,6 @@ export const ConectorRootWrapper = styled.div`
   }
 `;
 
-export const ConectorRoot = ({ children }: ConectorRootProps) => {
-  return <ConectorRootWrapper>{children}</ConectorRootWrapper>;
+export const ConnectorRoot = ({ children }: ConnectorRootProps) => {
+  return <ConnectorRootWrapper>{children}</ConnectorRootWrapper>;
 };
