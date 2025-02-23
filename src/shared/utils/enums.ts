@@ -12,7 +12,7 @@ export enum Colors {
   DEFAULT = "#e0e0e0",
   GRAY = "gray",
   GREEN = "green",
-  BLUE = "blue",
+  BLUE = "oklch(0.546 0.245 262.881)",
 }
 
 export enum Progress {
