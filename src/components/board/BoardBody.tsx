@@ -14,7 +14,7 @@ const BoardBodyWrapper = styled.section`
   padding: 5px;
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     margin: 0;
     padding: 0;
     gap: 1rem;

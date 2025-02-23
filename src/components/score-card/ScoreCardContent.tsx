@@ -23,6 +23,7 @@ const ScoreCardContentWrapper = styled.div`
 
   @media (max-width: 1024px) {
     flex: 1;
+    gap: 0;
   }
 `;
 
