@@ -4,11 +4,17 @@ interface TalentTreeImageProps {
   src: string;
   alt: string;
   borderColor: string;
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  brightness: number;
+  handleClick: (
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.KeyboardEvent<HTMLButtonElement>
+  ) => void;
 }
 
-const TalentImageWrapper = styled.img<{
+const TalentTreeImageWrapper = styled.img<{
   borderColor: string;
+  brightness: number;
 }>`
   width: 64px;
   height: 64px;
@@ -16,7 +22,7 @@ const TalentImageWrapper = styled.img<{
   background-color: #313031;
   border: 2px solid ${(props) => props.borderColor};
   position: relative;
-  filter: brightness(100%);
+  filter: brightness(${(props) => props.brightness}%);
   transition: filter 0.3s;
 
   &:hover {
@@ -30,7 +36,7 @@ const TalentTreeImageButton = styled.button`
   padding: 0;
   cursor: pointer;
 
-  &:focus ${TalentImageWrapper} {
+  &:focus ${TalentTreeImageWrapper} {
     outline: none;
     filter: brightness(100%);
   }
@@ -40,11 +46,17 @@ export const TalentTreeImage = ({
   src,
   alt,
   borderColor,
+  brightness,
   handleClick,
 }: TalentTreeImageProps) => {
   return (
-    <TalentTreeImageButton onMouseDown={handleClick}>
-      <TalentImageWrapper src={src} alt={alt} borderColor={borderColor} />
+    <TalentTreeImageButton onMouseDown={handleClick} onKeyDown={handleClick}>
+      <TalentTreeImageWrapper
+        src={src}
+        alt={alt}
+        borderColor={borderColor}
+        brightness={brightness}
+      />
     </TalentTreeImageButton>
   );
 };

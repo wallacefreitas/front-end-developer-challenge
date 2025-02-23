@@ -14,7 +14,7 @@ export function PathGroupComponent({
   talentsPath,
 }: PathGroupComponentProps) {
   const talentsPathLength = talentsPath.length;
-  const { connectorColors, borderColors, progress, moveTalent } =
+  const { connectorColors, borderColors, brightness, progress, moveTalent } =
     useConnectorState(talentsPathLength);
 
   return (
@@ -30,6 +30,7 @@ export function PathGroupComponent({
                 src={`./src/assets/images/${talentPath}.png`}
                 alt={"Skull"}
                 borderColor={borderColors[index]}
+                brightness={brightness[index]}
                 handleClick={(event) => moveTalent(event, index)}
               />
               {index !== talentsPath.length - 1 && (
