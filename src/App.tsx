@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import { Container } from "./components/container";
 import { Main } from "./components/main";
 import { Board } from "./components/board";
@@ -10,7 +11,14 @@ import { talentsPath1, talentsPath2 } from "./shared/utils/types";
 import { Points } from "./shared/utils/enums";
 
 export default function App() {
-  const { points } = useContext(TalentContext);
+  const { points, toastMessage, setToastMessage } = useContext(TalentContext);
+
+  useEffect(() => {
+    if (toastMessage !== "") {
+      toast(toastMessage);
+      setToastMessage("");
+    }
+  }, [toastMessage, setToastMessage]);
 
   return (
     <Container onContextMenu={(e) => e.preventDefault()}>
@@ -44,6 +52,7 @@ export default function App() {
             </ScoreCard.Root>
           </Board.Body>
         </Board.Root>
+        <ToastContainer theme="dark" />
       </Main>
     </Container>
   );
