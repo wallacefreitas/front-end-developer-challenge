@@ -9,7 +9,6 @@ const BoardBodyWrapper = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 2px solid yellow;
   margin: 10px;
   padding: 5px;
   gap: 2rem;

@@ -12,7 +12,6 @@ const ContainerWrapper = styled.main`
   gap: 2rem;
   min-height: 100vh;
   padding: 3rem;
-  border: 2px solid red;
 
   @media (max-width: 768px) {
     padding: 1rem;

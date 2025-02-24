@@ -7,7 +7,6 @@ interface TalentTreePathProps {
 const TalentTreePathWrapper = styled.div`
   display: flex;
   align-items: center;
-  border: 2px solid orange;
   flex: 1;
   gap: 2rem;
 `;

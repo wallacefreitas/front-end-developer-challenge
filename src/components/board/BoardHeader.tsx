@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const BoardHeaderWrapper = styled.header`
-  border: 2px solid blue;
   padding: 20px 0;
   display: flex;
   align-items: center;

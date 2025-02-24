@@ -7,7 +7,6 @@ interface ScoreCardRootProps {
 const ScoreCardRootWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  border: 2px solid orange;
 `;
 
 export const ScoreCardRoot = ({ children }: ScoreCardRootProps) => {

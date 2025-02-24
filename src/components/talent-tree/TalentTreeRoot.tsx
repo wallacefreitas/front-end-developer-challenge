@@ -8,7 +8,6 @@ const TalentTreeRootWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
   gap: 0.5rem;
 
   @media (max-width: 768px) {

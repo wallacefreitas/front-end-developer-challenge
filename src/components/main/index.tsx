@@ -8,7 +8,6 @@ export const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  border: 2px solid orange;
 `;
 
 export const Main = ({ children }: MainProps) => {
