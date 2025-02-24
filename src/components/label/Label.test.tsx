@@ -15,12 +15,4 @@ describe("Label Component", () => {
     const labelElement = screen.getByTestId("label");
     expect(labelElement).toBeInTheDocument();
   });
-
-  // it("hides Label component on small screens when responsive is true", () => {
-  //   render(<Label text="Label Content" responsive={true} />);
-  //   const labelElement = screen.getByText(/Label Content/i);
-  //   expect(labelElement).toHaveStyleRule("display", "none", {
-  //     media: "(max-width: 1024px)",
-  //   });
-  // });
 });
