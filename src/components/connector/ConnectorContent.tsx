@@ -28,6 +28,11 @@ const ConectorContentWrapper = styled.div<{
   );
   background-size: 40px 40px;
   animation: ${stripeAnimation} 1s linear infinite;
+
+  @media (max-width: 768px) {
+    width: 20px;
+    height: 35px;
+  }
 `;
 
 export const ConectorContent = ({
