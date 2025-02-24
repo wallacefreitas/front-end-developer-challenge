@@ -2,6 +2,12 @@
 
 This project was build using React (Vite), Styled Components and Storybook
 
+Below I explained a little of patterns:
+
+Composition Pattern
+
+Used destructuring of components into smaller parts in order to ensure their flexibility and scalability
+
 ## 🔥 Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
@@ -49,7 +55,7 @@ npm run dev
 npm run test:unit
 ```
 
-![Test Integration picture](assets/test-integration.png)
+![Unit Tests picture](assets/images/unit-tests.png)
 
 > 🚨 **Warning**
 >
@@ -94,6 +100,10 @@ Responsive screens:
 Accessing Storybook:
 
 ![Storybook](assets/images/storybook.png)
+
+## 🔮 Future Implementations
+
+✓ Improve coverage of tests <br>
 
 ## 📝 License
 
