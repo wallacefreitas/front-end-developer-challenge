@@ -11,8 +11,15 @@ interface PathGroupComponentProps {
 }
 
 export function PathGroupComponent({ label, skills }: PathGroupComponentProps) {
-  const { connectorColors, borderColors, brightness, progress, moveTalent } =
-    useConnectorState(skills);
+  const {
+    connectorColors,
+    borderColors,
+    brightness,
+    progress,
+    moveTalent,
+    handleTouchStart,
+    handleTouchEnd,
+  } = useConnectorState(skills);
 
   return (
     <PathGroup.Root>
@@ -29,6 +36,8 @@ export function PathGroupComponent({ label, skills }: PathGroupComponentProps) {
                 borderColor={borderColors[index]}
                 brightness={brightness[index]}
                 handleClick={(event) => moveTalent(event, index)}
+                handleTouchStart={(event) => handleTouchStart(event, index)}
+                handleTouchEnd={handleTouchEnd}
               />
               {index !== skills.length - 1 && (
                 <Connector.Root>

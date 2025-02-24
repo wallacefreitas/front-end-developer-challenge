@@ -19,6 +19,24 @@ export function useConnectorState(skills: Skill[]) {
     Array(skills.length).fill(50)
   );
 
+  let touchTimeout: ReturnType<typeof setTimeout>;
+
+  function handleTouchStart(
+    event: React.TouchEvent<HTMLButtonElement>,
+    index: number
+  ) {
+    touchTimeout = setTimeout(() => {
+      moveTalent(
+        { button: Mouse.RIGHT_BUTTON } as MouseEvent<HTMLButtonElement>,
+        index
+      );
+    }, 500);
+  }
+
+  function handleTouchEnd() {
+    clearTimeout(touchTimeout);
+  }
+
   function moveTalent(event: MouseEvent<HTMLButtonElement>, index: number) {
     const newProgress = [...progress];
     const newBackgroundColors = [...connectorColors];
@@ -73,8 +91,6 @@ export function useConnectorState(skills: Skill[]) {
         skillSelected.active = false;
         decreasePoints();
 
-        event.currentTarget.blur();
-
         newBackgroundColors[index] = Colors.DEFAULT;
         newProgress[index] = Progress.EMPTY;
         newBorderColors[index] = Colors.DEFAULT;
@@ -100,5 +116,7 @@ export function useConnectorState(skills: Skill[]) {
     brightness,
     progress,
     moveTalent,
+    handleTouchStart,
+    handleTouchEnd,
   };
 }
