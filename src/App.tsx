@@ -7,7 +7,7 @@ import { TalentTree } from "./components/talent-tree";
 import { ScoreCard } from "./components/score-card";
 import { PathGroupComponent } from "./components/path-group/PathGroup";
 import { TalentContext } from "./context/TalentContext";
-import { talentsPath1, talentsPath2 } from "./shared/utils/types";
+import { talents } from "./shared/utils/data";
 import { Points } from "./shared/utils/enums";
 
 export default function App() {
@@ -27,22 +27,16 @@ export default function App() {
           <Board.Header />
           <Board.Body>
             <TalentTree.Root>
-              <TalentTree.Group>
-                <TalentTree.Path>
-                  <PathGroupComponent
-                    label={`Talent Path 1`}
-                    talentsPath={talentsPath1}
-                  />
-                </TalentTree.Path>
-              </TalentTree.Group>
-              <TalentTree.Group>
-                <TalentTree.Path>
-                  <PathGroupComponent
-                    label={`Talent Path 2`}
-                    talentsPath={talentsPath2}
-                  />
-                </TalentTree.Path>
-              </TalentTree.Group>
+              {talents.map((talent, index) => (
+                <TalentTree.Group key={index}>
+                  <TalentTree.Path>
+                    <PathGroupComponent
+                      label={talent.name}
+                      skills={talent.skills}
+                    />
+                  </TalentTree.Path>
+                </TalentTree.Group>
+              ))}
             </TalentTree.Root>
             <ScoreCard.Root>
               <ScoreCard.Content>
