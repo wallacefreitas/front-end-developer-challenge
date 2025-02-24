@@ -5,11 +5,7 @@ interface TalentTreeImageProps {
   alt: string;
   borderColor: string;
   brightness: number;
-  handleClick: (
-    event:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.KeyboardEvent<HTMLButtonElement>
-  ) => void;
+  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const TalentTreeImageWrapper = styled.img<{
@@ -50,7 +46,7 @@ export const TalentTreeImage = ({
   handleClick,
 }: TalentTreeImageProps) => {
   return (
-    <TalentTreeImageButton onMouseDown={handleClick} onKeyDown={handleClick}>
+    <TalentTreeImageButton onMouseDown={handleClick}>
       <TalentTreeImageWrapper
         src={src}
         alt={alt}
