@@ -1,5 +1,4 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Board } from "./index";
 
 export default {
@@ -7,7 +6,7 @@ export default {
   component: Board.Root,
 } as Meta;
 
-const Template: Story = (args) => (
+const Template: StoryFn = (args) => (
   <Board.Root>
     <Board.Header {...args.headerArgs} />
     <Board.Body {...args.bodyArgs} />

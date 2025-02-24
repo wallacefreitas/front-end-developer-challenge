@@ -1,5 +1,4 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ScoreCard } from "./index";
 
 export default {
@@ -7,9 +6,9 @@ export default {
   component: ScoreCard.Root,
 } as Meta;
 
-const Template: Story = (args) => (
+const Template: StoryFn = (args) => (
   <ScoreCard.Root>
-    <ScoreCard.Content {...args} />
+    <ScoreCard.Content {...args}>{args.children}</ScoreCard.Content>
   </ScoreCard.Root>
 );
 
