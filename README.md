@@ -1,50 +1,102 @@
-# React + TypeScript + Vite
+## 🚀 DnDBeyond Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was build using React (Vite), Styled Components and Storybook
 
-Currently, two official plugins are available:
+## 🔥 Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Before you begin, ensure you have the following installed on your machine:
 
-## Expanding the ESLint configuration
+- Node.js (>= 22.x)
+- npm (>= 11.x)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🧙‍♂️ Instructions
 
-- Configure the top-level `parserOptions` property like this:
+- [Instructions Here](./instructions/README.md)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 💾 Installation
+
+1. Clone the repository:
+
+```sh
+# Clone this repository
+$ git clone https://github.com/wallacefreitas/front-end-developer-challenge.git
+
+# Access project folder
+cd front-end-developer-challenge
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install the dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm install
 ```
+
+## 👟 Running the Application
+
+1. Start the application:
+
+```sh
+npm run dev
+```
+
+![Start server picture](assets/images/start-server.png)
+
+## ⏱️ Running Tests
+
+1. Run the unit tests:
+
+```sh
+npm run test:unit
+```
+
+![Test Integration picture](assets/test-integration.png)
+
+> 🚨 **Warning**
+>
+> Do not run the integrated tests together with the application because in the integrated test the server was stoned and both use the same port
+
+## 📂 Project Structure
+
+```sh
+front-end-developer-challenge/
+├── src/
+│   ├── assets/
+│   │   ├── fonts/
+│   │   ├── images/
+│   ├── components/
+│   ├── context/
+│   ├── hooks/
+│   ├── shared/
+│   │   ├── utils/
+│   ├── App.tsx
+│   ├── global.css
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## ⚙️ Services
+
+| Description (App) | Host                  | Port |
+| :---------------- | :-------------------- | :--: |
+| application       | http://localhost:5173 | 5173 |
+| storybook         | http://localhost:6006 | 6006 |
+
+## 📷 Screenshots
+
+Responsive screens:
+
+![Responsive screens](assets/images/responsive-screens.png)
+
+Accessing Storybook:
+
+![Storybook](assets/images/storybook.png)
+
+## 📝 License
+
+This project is under license MIT.
+
+Made with ♥️ by Wallace de Freitas 👋🏻
