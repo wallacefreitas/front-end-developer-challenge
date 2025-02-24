@@ -6,7 +6,7 @@ interface LabelProps extends HTMLAttributes<HTMLSpanElement> {
   responsive?: boolean;
 }
 
-const LabelWrapper = styled.h1<{ responsive?: boolean }>`
+const LabelWrapper = styled.h1<{ $responsive?: boolean }>`
   display: flex;
   flex: 1;
   text-transform: uppercase;
@@ -15,7 +15,7 @@ const LabelWrapper = styled.h1<{ responsive?: boolean }>`
   max-width: 200px;
 
   ${(props) =>
-    props.responsive &&
+    props.$responsive &&
     `
       @media (max-width: 1024px) {
         display: none;
@@ -24,8 +24,9 @@ const LabelWrapper = styled.h1<{ responsive?: boolean }>`
 `;
 
 export const Label = ({ text, responsive, ...rest }: LabelProps) => {
+  console.log("Responsive:", responsive);
   return (
-    <LabelWrapper responsive={responsive} {...rest}>
+    <LabelWrapper $responsive={responsive} {...rest}>
       {text}
     </LabelWrapper>
   );
