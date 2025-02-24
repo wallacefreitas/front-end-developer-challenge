@@ -1,5 +1,4 @@
-import React from "react";
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Main } from "./index";
 
 export default {
@@ -7,7 +6,9 @@ export default {
   component: Main,
 } as Meta;
 
-const Template: Story = (args) => <Main {...args} />;
+const Template: StoryFn = (args) => (
+  <Main {...{ children: <div>Main Content</div>, ...args }} />
+);
 
 export const Default = Template.bind({});
 Default.args = {
