@@ -24,7 +24,7 @@ export function PathGroupComponent({ label, skills }: PathGroupComponentProps) {
           return (
             <PathGroup.SectionItem key={index}>
               <TalentTree.Image
-                src={`./src/assets/images/${skill.icon}.png`}
+                src={`./src/assets/images/icons/${skill.icon}.png`}
                 alt={skill.alt}
                 borderColor={borderColors[index]}
                 brightness={brightness[index]}
