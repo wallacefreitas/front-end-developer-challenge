@@ -57,10 +57,6 @@ npm run test:unit
 
 ![Unit Tests picture](assets/images/unit-tests.png)
 
-> 🚨 **Warning**
->
-> Do not run the integrated tests together with the application because in the integrated test the server was stoned and both use the same port
-
 ## 📂 Project Structure
 
 ```sh
