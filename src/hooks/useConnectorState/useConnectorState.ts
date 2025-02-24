@@ -22,7 +22,7 @@ export function useConnectorState(skills: Skill[]) {
   let touchTimeout: ReturnType<typeof setTimeout>;
 
   function handleTouchStart(
-    event: React.TouchEvent<HTMLButtonElement>,
+    _: React.TouchEvent<HTMLButtonElement>,
     index: number
   ) {
     touchTimeout = setTimeout(() => {
