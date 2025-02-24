@@ -24,7 +24,6 @@ const LabelWrapper = styled.h1<{ $responsive?: boolean }>`
 `;
 
 export const Label = ({ text, responsive, ...rest }: LabelProps) => {
-  console.log("Responsive:", responsive);
   return (
     <LabelWrapper $responsive={responsive} {...rest}>
       {text}
