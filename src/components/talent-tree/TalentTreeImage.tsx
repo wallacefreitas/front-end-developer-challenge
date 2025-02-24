@@ -10,17 +10,17 @@ interface TalentTreeImageProps {
   handleTouchEnd: () => void;
 }
 
-const TalentTreeImageWrapper = styled.img<{
-  borderColor: string;
-  brightness: number;
+const TalentTreeImageWrapper = styled.div<{
+  $borderColor: string;
+  $brightness: number;
 }>`
   width: 64px;
   height: 64px;
   padding: 4px;
   background-color: #313031;
-  border: 2px solid ${(props) => props.borderColor};
+  border: 2px solid ${(props) => props.$borderColor};
   position: relative;
-  filter: brightness(${(props) => props.brightness}%);
+  filter: brightness(${(props) => props.$brightness}%);
   transition: filter 0.3s;
 
   &:hover {
@@ -56,11 +56,11 @@ export const TalentTreeImage = ({
       onTouchEnd={handleTouchEnd}
     >
       <TalentTreeImageWrapper
-        src={src}
-        alt={alt}
-        borderColor={borderColor}
-        brightness={brightness}
-      />
+        $borderColor={borderColor}
+        $brightness={brightness}
+      >
+        <img src={src} alt={alt} />
+      </TalentTreeImageWrapper>
     </TalentTreeImageButton>
   );
 };

@@ -11,5 +11,5 @@ export const MainWrapper = styled.main`
 `;
 
 export const Main = ({ children }: MainProps) => {
-  return <MainWrapper>{children}</MainWrapper>;
+  return <MainWrapper data-testid="main">{children}</MainWrapper>;
 };

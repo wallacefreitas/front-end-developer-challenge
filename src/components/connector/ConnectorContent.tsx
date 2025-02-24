@@ -40,6 +40,10 @@ export const ConectorContent = ({
   width,
 }: ConectorContentProps) => {
   return (
-    <ConectorContentWrapper backgroundColor={backgroundColor} width={width} />
+    <ConectorContentWrapper
+      backgroundColor={backgroundColor}
+      width={width}
+      role="presentation"
+    />
   );
 };
