@@ -57,6 +57,18 @@ npm run test:unit
 
 ![Unit Tests picture](assets/images/unit-tests.png)
 
+## ⌨️ Keyboards
+
+On Computer:
+
+- Mouse Left Button = Spent 1 point
+- Mouse Right Button = Returns 1 point
+
+On Smartphone:
+
+- Mouse Left Button = Spent 1 point
+- Mouse Left Button (3 Seconds) = Returns 1 point
+
 ## 📂 Project Structure
 
 ```sh
